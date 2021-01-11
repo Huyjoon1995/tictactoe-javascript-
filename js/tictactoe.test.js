@@ -32,3 +32,14 @@ describe("check for a draw", () => {
         expect(tictactoe.isDraw(board)).toBe(true);
     });
 });
+
+describe("validation for cell", () => {
+    it('valid cell', () => {
+        var row = 1;
+        expect(tictactoe.inBound(row)).toBe(true);
+    });
+    it('not valid cell', () => {
+        var row = 9;
+        expect(tictactoe.inBound(row)).toBe(false);
+    })
+});
